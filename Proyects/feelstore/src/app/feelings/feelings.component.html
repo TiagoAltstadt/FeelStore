@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-feelings-list (feelingWasSelected)="selectedFeeling = $event"></app-feelings-list>
+    </div>
+    <div class="col-md-7">
+        <app-feeling-detail *ngIf="selectedFeeling; else infoText" [feeling]="selectedFeeling"></app-feeling-detail>
+        <ng-template #infoText><p>Please select a feeling!</p></ng-template>
+    </div>
+</div>

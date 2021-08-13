@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-xs 12">
+        <img src="{{ feeling.imagePath }}" alt="{{ feeling.imagePath }}" style="width: 100%;" class="img-response">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{ feeling.name }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle">Manage Feeling <span
+                    class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Shopping List</a></li>
+                <li><a href="#">Edit Feeling</a></li>
+                <li><a href="#">Delete Feeling</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{ feeling.description}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        Emotions
+    </div>
+</div>

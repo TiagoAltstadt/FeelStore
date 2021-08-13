@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Feeling</button>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-xs-12">
+        <app-feeling-item *ngFor="let feelingElement of feelings" [feeling]="feelingElement" (feelingSelected)="onFeelingSelected(feelingElement)"></app-feeling-item>
+    </div>
+</div>
