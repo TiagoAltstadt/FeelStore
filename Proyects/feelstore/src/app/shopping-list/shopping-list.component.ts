@@ -21,6 +21,8 @@ export class ShoppingListComponent implements OnInit {
   ];
 
   constructor() {}
+  
+  ngOnInit(): void {}
 
   onEmotionAdded(emotion: Emotion){
     console.log(emotion);
@@ -28,5 +30,4 @@ export class ShoppingListComponent implements OnInit {
     this.emotions.push(emotion);
   }
 
-  ngOnInit(): void {}
 }

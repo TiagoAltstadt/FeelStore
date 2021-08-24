@@ -17,21 +17,20 @@ export class ShoppingEditComponent implements OnInit {
   @ViewChild('nameInput', {static: false}) nameInputRef: ElementRef;
   @ViewChild('descriptionInput', {static: false}) descriptionInputRef: ElementRef;
   @ViewChild('imageInput', {static: false}) imageInputRef: ElementRef;
-  @Output() emotionAdded = new EventEmitter<{ name: string; description: string, imagePath }>();
+  @Output() emotionAdded = new EventEmitter<Emotion>();
 
   constructor() {}
+  
+  ngOnInit(): void {}
 
   onAddEmotion() {
     const emotionName = this.nameInputRef.nativeElement.value;
     const emotionDescription = this.descriptionInputRef.nativeElement.value;
     const emotionImage = this.imageInputRef.nativeElement.value;
-    const addEmotion = new Emotion(
-      emotionName,
-      emotionDescription,
-      emotionImage
-    );
+
+    const addEmotion = new Emotion( emotionName, emotionDescription, emotionImage );
+
     this.emotionAdded.emit(addEmotion);
   }
 
-  ngOnInit(): void {}
 }
